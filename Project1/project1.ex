@@ -20,17 +20,10 @@ defmodule Project1 do
         no_of_cores = 10*System.schedulers_online                           # Total number of cores on the system
         work_range = n / no_of_cores |> Float.ceil |> Kernel.trunc          # number of numbers that has to be processed by each thread 
         t = 1                                                               # Initial number
-        if n < no_of_cores do                                               # Run if n is less than number of cores
-            create_actors(1, t, n, k, n, self())
+        create_actors(no_of_cores, t, work_range, k, n, self())             # Recursive function to create actors 
+        for _ <- 1..no_of_cores do
             receive do
                 {:ok, _} -> nil
-            end
-        else                                                                # Run if n is more than the number of cores
-           create_actors(no_of_cores, t, work_range, k, n, self())          # Recursive function to create actors 
-           for _ <- 1..no_of_cores do
-                receive do
-                    {:ok, _} -> nil
-                end
             end
         end
     end
