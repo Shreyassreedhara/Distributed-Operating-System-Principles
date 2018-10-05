@@ -140,16 +140,16 @@ defmodule Server do
 				rowcnt = round(:math.sqrt(numNodes))
 				for i <- 1..numNodes do
 					neighborList = cond do
-										i == 1 -> [i+1, i+rowcnt, i+rowcnt-1, numNodes-rowcnt+1]
-										i == rowcnt -> [1, i-1, i+rowcnt, numNodes]
-										i == numNodes-rowcnt+1 -> [1,numNodes,i+1,i-rowcnt]
-										i == numNodes -> [i-1,i-rowcnt,i-rowcnt+1,rowcnt]
-										i < rowcnt -> [i-1, i+1, i+rowcnt, numNodes-(rowcnt-i)]
-										i > (numNodes - rowcnt + 1) -> [i-1, i+1, i-rowcnt, rowcnt-(numNodes-i)]
-										rem(i, rowcnt) == 1 -> [i+1, i-rowcnt, i+rowcnt, i+rowcnt-1]
-										rem(i, rowcnt) == 0 -> [i-1, i-rowcnt, i+rowcnt, i-rowcnt+1]
-										true -> [i+1, i-1, i-rowcnt, i+rowcnt] 
-									end
+								i == 1 -> [i+1, i+rowcnt, i+rowcnt-1, numNodes-rowcnt+1]
+								i == rowcnt -> [1, i-1, i+rowcnt, numNodes]
+								i == numNodes-rowcnt+1 -> [1,numNodes,i+1,i-rowcnt]
+								i == numNodes -> [i-1,i-rowcnt,i-rowcnt+1,rowcnt]
+								i < rowcnt -> [i-1, i+1, i+rowcnt, numNodes-(rowcnt-i)]
+								i > (numNodes - rowcnt + 1) -> [i-1, i+1, i-rowcnt, rowcnt-(numNodes-i)]
+								rem(i, rowcnt) == 1 -> [i+1, i-rowcnt, i+rowcnt, i+rowcnt-1]
+								rem(i, rowcnt) == 0 -> [i-1, i-rowcnt, i+rowcnt, i-rowcnt+1]
+								true -> [i+1, i-1, i-rowcnt, i+rowcnt] 
+							end
 					pid = spawn(fn -> Gossip_worker.start_link(i,neighborList) end)
 					Process.monitor(pid)
 				end
@@ -174,39 +174,38 @@ defmodule Server do
 					planeNum = Float.ceil(i/planeCnt)
 					planeNum = Kernel.trunc(planeNum)
 					neighborList = case planeNum do
-										1 -> cond do
-												i == 1 -> [i+1, i+rowcnt, i+planeCnt]
-												i == rowcnt -> [rowcnt-1, rowcnt+rowcnt, rowcnt+planeCnt]
-												i == planeCnt - rowcnt + 1 -> [i+1, i-rowcnt, i+planeCnt]
-												i == planeCnt -> [i-1, i-rowcnt, i+planeCnt]
-												i < rowcnt -> [i-1, i+1, i+rowcnt, i+planeCnt]
-												rem(i, rowcnt) == 1 -> [i+1, i-rowcnt, i+rowcnt, i+planeCnt]
-												rem(i, rowcnt) == 0 -> [i-1, i-rowcnt, i+rowcnt, i+planeCnt]
-												i > planeCnt - rowcnt -> [i+1, i-1, i-rowcnt, i+planeCnt]
-												true -> [i-1, i+1, i-rowcnt, i+rowcnt, i+planeCnt]
-											 end
+									1 -> cond do											i == 1 -> [i+1, i+rowcnt, i+planeCnt]
+										i == rowcnt -> [rowcnt-1, rowcnt+rowcnt, rowcnt+planeCnt]
+										i == planeCnt - rowcnt + 1 -> [i+1, i-rowcnt, i+planeCnt]
+										i == planeCnt -> [i-1, i-rowcnt, i+planeCnt]
+										i < rowcnt -> [i-1, i+1, i+rowcnt, i+planeCnt]
+										rem(i, rowcnt) == 1 -> [i+1, i-rowcnt, i+rowcnt, i+planeCnt]
+										rem(i, rowcnt) == 0 -> [i-1, i-rowcnt, i+rowcnt, i+planeCnt]
+										i > planeCnt - rowcnt -> [i+1, i-1, i-rowcnt, i+planeCnt]
+										true -> [i-1, i+1, i-rowcnt, i+rowcnt, i+planeCnt]
+									 end
 									rowcnt -> cond do
-												i == numNodes - planeCnt + 1 -> [i+1, i+rowcnt, i-planeCnt]
-												i == numNodes - planeCnt + rowcnt -> [i-1, i+rowcnt, i-planeCnt]
-												i == numNodes - rowcnt + 1 -> [i+1, i-rowcnt, i-planeCnt]
-												i == numNodes -> [i-1, i-rowcnt, i-planeCnt]
-												i < numNodes - planeCnt + rowcnt -> [i-1, i+1, i+rowcnt, i-planeCnt]
-												rem(i, rowcnt) == 1 -> [i+1, i-rowcnt, i+rowcnt, i-planeCnt]
-												rem(i, rowcnt) == 0 -> [i-1, i-rowcnt, i+rowcnt, i-planeCnt]
-												i > numNodes - rowcnt -> [i+1, i-1, i-rowcnt, i-planeCnt]
-												true -> [i-1, i+1, i-rowcnt, i+rowcnt, i-planeCnt]
-											 end
+										i == numNodes - planeCnt + 1 -> [i+1, i+rowcnt, i-planeCnt]
+										i == numNodes - planeCnt + rowcnt -> [i-1, i+rowcnt, i-planeCnt]
+										i == numNodes - rowcnt + 1 -> [i+1, i-rowcnt, i-planeCnt]
+										i == numNodes -> [i-1, i-rowcnt, i-planeCnt]
+										i < numNodes - planeCnt + rowcnt -> [i-1, i+1, i+rowcnt, i-planeCnt]
+										rem(i, rowcnt) == 1 -> [i+1, i-rowcnt, i+rowcnt, i-planeCnt]
+										rem(i, rowcnt) == 0 -> [i-1, i-rowcnt, i+rowcnt, i-planeCnt]
+										i > numNodes - rowcnt -> [i+1, i-1, i-rowcnt, i-planeCnt]
+										true -> [i-1, i+1, i-rowcnt, i+rowcnt, i-planeCnt]
+									 end
 									true -> cond do
-												i == (planeNum * planeCnt) - planeCnt + 1 -> [i+1, i+rowcnt, i-planeCnt, i+planeCnt]
-												i == (planeNum * planeCnt) - planeCnt + rowcnt -> [i-1, i+rowcnt, i-planeCnt, i+planeCnt]
-												i == (planeNum * planeCnt) - rowcnt + 1 -> [i+1, i-rowcnt, i-planeCnt, i+planeCnt]
-												i == (planeNum * planeCnt) -> [i-1, i-rowcnt, i-planeCnt, i+planeCnt]
-												i < (planeNum * planeCnt) - planeCnt + rowcnt -> [i-1, i+1, i+rowcnt, i-planeCnt, i+planeCnt]
-												rem(i, rowcnt) == 1 -> [i+1, i-rowcnt, i+rowcnt, i-planeCnt, i+planeCnt]
-												rem(i, rowcnt) == 0 -> [i-1, i-rowcnt, i+rowcnt, i-planeCnt, i+planeCnt]
-												i > (planeNum * planeCnt) - rowcnt -> [i+1, i-1, i-rowcnt, i-planeCnt, i+planeCnt]
-												true -> [i-1, i+1, i-rowcnt, i+rowcnt, i-planeCnt, i+planeCnt]
-											 end
+										i == (planeNum * planeCnt) - planeCnt + 1 -> [i+1, i+rowcnt, i-planeCnt, i+planeCnt]
+										i == (planeNum * planeCnt) - planeCnt + rowcnt -> [i-1, i+rowcnt, i-planeCnt, i+planeCnt]
+										i == (planeNum * planeCnt) - rowcnt + 1 -> [i+1, i-rowcnt, i-planeCnt, i+planeCnt]
+										i == (planeNum * planeCnt) -> [i-1, i-rowcnt, i-planeCnt, i+planeCnt]
+										i < (planeNum * planeCnt) - planeCnt + rowcnt -> [i-1, i+1, i+rowcnt, i-planeCnt, i+planeCnt]
+										rem(i, rowcnt) == 1 -> [i+1, i-rowcnt, i+rowcnt, i-planeCnt, i+planeCnt]
+										rem(i, rowcnt) == 0 -> [i-1, i-rowcnt, i+rowcnt, i-planeCnt, i+planeCnt]
+										i > (planeNum * planeCnt) - rowcnt -> [i+1, i-1, i-rowcnt, i-planeCnt, i+planeCnt]
+										true -> [i-1, i+1, i-rowcnt, i+rowcnt, i-planeCnt, i+planeCnt]
+									 end
 					end
 					pid = spawn(fn -> Gossip_worker.start_link(i,neighborList) end)
 					Process.monitor(pid)
@@ -329,16 +328,16 @@ defmodule Server do
 				rowcnt = round(:math.sqrt(numNodes))
 				for i <- 1..numNodes do
 					neighborList = cond do
-										i == 1 -> [i+1, i+rowcnt, i+rowcnt-1, numNodes-rowcnt+1]
-										i == rowcnt -> [1, i-1, i+rowcnt, numNodes]
-										i == numNodes-rowcnt+1 -> [1,numNodes,i+1,i-rowcnt]
-										i == numNodes -> [i-1,i-rowcnt,i-rowcnt+1,rowcnt]
-										i < rowcnt -> [i-1, i+1, i+rowcnt, numNodes-(rowcnt-i)]
-										i > (numNodes - rowcnt + 1) -> [i-1, i+1, i-rowcnt, rowcnt-(numNodes-i)]
-										rem(i, rowcnt) == 1 -> [i+1, i-rowcnt, i+rowcnt, i+rowcnt-1]
-										rem(i, rowcnt) == 0 -> [i-1, i-rowcnt, i+rowcnt, i-rowcnt+1]
-										true -> [i+1, i-1, i-rowcnt, i+rowcnt] 
-									end
+								i == 1 -> [i+1, i+rowcnt, i+rowcnt-1, numNodes-rowcnt+1]
+								i == rowcnt -> [1, i-1, i+rowcnt, numNodes]
+								i == numNodes-rowcnt+1 -> [1,numNodes,i+1,i-rowcnt]
+								i == numNodes -> [i-1,i-rowcnt,i-rowcnt+1,rowcnt]
+								i < rowcnt -> [i-1, i+1, i+rowcnt, numNodes-(rowcnt-i)]
+								i > (numNodes - rowcnt + 1) -> [i-1, i+1, i-rowcnt, rowcnt-(numNodes-i)]
+								rem(i, rowcnt) == 1 -> [i+1, i-rowcnt, i+rowcnt, i+rowcnt-1]
+								rem(i, rowcnt) == 0 -> [i-1, i-rowcnt, i+rowcnt, i-rowcnt+1]
+								true -> [i+1, i-1, i-rowcnt, i+rowcnt] 
+							end
 					pid = spawn(fn -> PushSum_worker.start_link(i,neighborList) end)
 					Process.monitor(pid)
 				end
@@ -363,39 +362,39 @@ defmodule Server do
 					planeNum = Float.ceil(i/planeCnt)
 					planeNum = Kernel.trunc(planeNum)
 					neighborList = case planeNum do
-										1 -> cond do
-												i == 1 -> [i+1, i+rowcnt, i+planeCnt]
-												i == rowcnt -> [rowcnt-1, rowcnt+rowcnt, rowcnt+planeCnt]
-												i == planeCnt - rowcnt + 1 -> [i+1, i-rowcnt, i+planeCnt]
-												i == planeCnt -> [i-1, i-rowcnt, i+planeCnt]
-												i < rowcnt -> [i-1, i+1, i+rowcnt, i+planeCnt]
-												rem(i, rowcnt) == 1 -> [i+1, i-rowcnt, i+rowcnt, i+planeCnt]
-												rem(i, rowcnt) == 0 -> [i-1, i-rowcnt, i+rowcnt, i+planeCnt]
-												i > planeCnt - rowcnt -> [i+1, i-1, i-rowcnt, i+planeCnt]
-												true -> [i-1, i+1, i-rowcnt, i+rowcnt, i+planeCnt]
-											 end
+									1 -> cond do
+										i == 1 -> [i+1, i+rowcnt, i+planeCnt]
+										i == rowcnt -> [rowcnt-1, rowcnt+rowcnt, rowcnt+planeCnt]
+										i == planeCnt - rowcnt + 1 -> [i+1, i-rowcnt, i+planeCnt]
+										i == planeCnt -> [i-1, i-rowcnt, i+planeCnt]
+										i < rowcnt -> [i-1, i+1, i+rowcnt, i+planeCnt]
+										rem(i, rowcnt) == 1 -> [i+1, i-rowcnt, i+rowcnt, i+planeCnt]
+										rem(i, rowcnt) == 0 -> [i-1, i-rowcnt, i+rowcnt, i+planeCnt]
+										i > planeCnt - rowcnt -> [i+1, i-1, i-rowcnt, i+planeCnt]
+										true -> [i-1, i+1, i-rowcnt, i+rowcnt, i+planeCnt]
+									 end
 									rowcnt -> cond do
-												i == numNodes - planeCnt + 1 -> [i+1, i+rowcnt, i-planeCnt]
-												i == numNodes - planeCnt + rowcnt -> [i-1, i+rowcnt, i-planeCnt]
-												i == numNodes - rowcnt + 1 -> [i+1, i-rowcnt, i-planeCnt]
-												i == numNodes -> [i-1, i-rowcnt, i-planeCnt]
-												i < numNodes - planeCnt + rowcnt -> [i-1, i+1, i+rowcnt, i-planeCnt]
-												rem(i, rowcnt) == 1 -> [i+1, i-rowcnt, i+rowcnt, i-planeCnt]
-												rem(i, rowcnt) == 0 -> [i-1, i-rowcnt, i+rowcnt, i-planeCnt]
-												i > numNodes - rowcnt -> [i+1, i-1, i-rowcnt, i-planeCnt]
-												true -> [i-1, i+1, i-rowcnt, i+rowcnt, i-planeCnt]
-											 end
+											i == numNodes - planeCnt + 1 -> [i+1, i+rowcnt, i-planeCnt]
+											i == numNodes - planeCnt + rowcnt -> [i-1, i+rowcnt, i-planeCnt]
+											i == numNodes - rowcnt + 1 -> [i+1, i-rowcnt, i-planeCnt]
+											i == numNodes -> [i-1, i-rowcnt, i-planeCnt]
+											i < numNodes - planeCnt + rowcnt -> [i-1, i+1, i+rowcnt, i-planeCnt]
+											rem(i, rowcnt) == 1 -> [i+1, i-rowcnt, i+rowcnt, i-planeCnt]
+											rem(i, rowcnt) == 0 -> [i-1, i-rowcnt, i+rowcnt, i-planeCnt]
+											i > numNodes - rowcnt -> [i+1, i-1, i-rowcnt, i-planeCnt]
+											true -> [i-1, i+1, i-rowcnt, i+rowcnt, i-planeCnt]
+										 end
 									true -> cond do
-												i == (planeNum * planeCnt) - planeCnt + 1 -> [i+1, i+rowcnt, i-planeCnt, i+planeCnt]
-												i == (planeNum * planeCnt) - planeCnt + rowcnt -> [i-1, i+rowcnt, i-planeCnt, i+planeCnt]
-												i == (planeNum * planeCnt) - rowcnt + 1 -> [i+1, i-rowcnt, i-planeCnt, i+planeCnt]
-												i == (planeNum * planeCnt) -> [i-1, i-rowcnt, i-planeCnt, i+planeCnt]
-												i < (planeNum * planeCnt) - planeCnt + rowcnt -> [i-1, i+1, i+rowcnt, i-planeCnt, i+planeCnt]
-												rem(i, rowcnt) == 1 -> [i+1, i-rowcnt, i+rowcnt, i-planeCnt, i+planeCnt]
-												rem(i, rowcnt) == 0 -> [i-1, i-rowcnt, i+rowcnt, i-planeCnt, i+planeCnt]
-												i > (planeNum * planeCnt) - rowcnt -> [i+1, i-1, i-rowcnt, i-planeCnt, i+planeCnt]
-												true -> [i-1, i+1, i-rowcnt, i+rowcnt, i-planeCnt, i+planeCnt]
-											 end
+											i == (planeNum * planeCnt) - planeCnt + 1 -> [i+1, i+rowcnt, i-planeCnt, i+planeCnt]
+											i == (planeNum * planeCnt) - planeCnt + rowcnt -> [i-1, i+rowcnt, i-planeCnt, i+planeCnt]
+											i == (planeNum * planeCnt) - rowcnt + 1 -> [i+1, i-rowcnt, i-planeCnt, i+planeCnt]
+											i == (planeNum * planeCnt) -> [i-1, i-rowcnt, i-planeCnt, i+planeCnt]
+											i < (planeNum * planeCnt) - planeCnt + rowcnt -> [i-1, i+1, i+rowcnt, i-planeCnt, i+planeCnt]
+											rem(i, rowcnt) == 1 -> [i+1, i-rowcnt, i+rowcnt, i-planeCnt, i+planeCnt]
+											rem(i, rowcnt) == 0 -> [i-1, i-rowcnt, i+rowcnt, i-planeCnt, i+planeCnt]
+											i > (planeNum * planeCnt) - rowcnt -> [i+1, i-1, i-rowcnt, i-planeCnt, i+planeCnt]
+											true -> [i-1, i+1, i-rowcnt, i+rowcnt, i-planeCnt, i+planeCnt]
+										 end
 					end
 					pid = spawn(fn -> PushSum_worker.start_link(i,neighborList) end)
 					Process.monitor(pid)
