@@ -115,10 +115,10 @@ defmodule Server do
 						randNum = :rand.uniform(numNodes)
 					end
 					neighborList = cond do
-										i == 1 -> [i+1, randNum]
-										i == numNodes -> [i-1, randNum]
-										true -> [i-1, i+1, randNum]
-									end
+								i == 1 -> [i+1, randNum]
+								i == numNodes -> [i-1, randNum]
+								true -> [i-1, i+1, randNum]
+							end
 					pid = spawn(fn -> Gossip_worker.start_link(i,neighborList) end)
 					Process.monitor(pid)
 				end
@@ -303,10 +303,10 @@ defmodule Server do
 						randNum = :rand.uniform(numNodes)
 					end
 					neighborList = cond do
-										i == 1 -> [i+1, randNum]
-										i == numNodes -> [i-1, randNum]
-										true -> [i-1, i+1, randNum]
-									end
+								i == 1 -> [i+1, randNum]
+								i == numNodes -> [i-1, randNum]
+								true -> [i-1, i+1, randNum]
+							end
 					pid = spawn(fn -> PushSum_worker.start_link(i,neighborList) end)
 					Process.monitor(pid)
 				end
