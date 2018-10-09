@@ -2,7 +2,7 @@
 
 All devices from phones to supercomputers are connected to the Internet or other communication networks. On the other hand, we have problems that are too large for any one device. So, we need to involve multiple devices/machines to solve such problems. Distributed systems principles and methods are crucial for tackling such a task. Networking provides the communication infrastructure, Algorithms/Data-structures/Databases the computational techniques but Distributed Systems provide the glue that holds everything together under mildly or harshly adversarial conditions. This class will be focused on tackling the challenges that arise in a principled manner.
 
-Course Outline
+## Course Outline
 
 1. Actor model and Elixir
 2. Definition, goals and examples of Distributed Systems
@@ -20,7 +20,11 @@ Course Outline
 14. Distributed multimedia systems 
 15. Security, access control
 
-Author information:
+## Author information:
 
 1. Shreyas Gaadikere Sreedhara, Email - shreyasgaadikere@ufl.edu
 2. Nirali Patel, Email - niralipatel@ufl.edu
+
+## License
+
+Licensed under the [MIT license](LICENSE.md)
