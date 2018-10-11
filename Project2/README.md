@@ -1,3 +1,4 @@
+## Gossip and Push-Sum communication protocol
 The aim of this project was to implement the Gossip and Push-Sum algorithms. These communication protocols are implied on various topologies such as Full, 3D grid, Random 2D grid, Torus, Line and Imperfect 2D. Based on these topologies, the neighbors of nodes are decided for spreading message. According to the observed time of conevergence i.e., dissemination speed of Gossip protocols/Push-Sum protocols, comparisons were made.
 
 # Contents
