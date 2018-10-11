@@ -20,6 +20,12 @@ All devices from phones to supercomputers are connected to the Internet or other
 14. Distributed multimedia systems 
 15. Security, access control
 
+## Contents
+
+This folder consists two distributed system projects that I designed as part of my Distributed Operating System Principles here at the University of Florida. 
+1. [Perfect sqaure for solving elliptic curve theory](Project1)
+2. [Gossip and Push Sum communication protocols](Project2)
+
 ## Author information:
 
 1. Shreyas Gaadikere Sreedhara, Email - shreyasgaadikere@ufl.edu
