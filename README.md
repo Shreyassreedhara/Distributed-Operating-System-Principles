@@ -20,7 +20,15 @@ All devices from phones to supercomputers are connected to the Internet or other
 14. Distributed multimedia systems 
 15. Security, access control
 
-## Author information:
+## Contents
+
+This folder consists two distributed system projects that I designed as part of my Distributed Operating System Principles here at the University of Florida. 
+1. [Finding perfect sqaures for solving elliptic curve theory](Project1)
+2. [Gossip and Push Sum communication protocols](Project2)
+
+All the projects make use of the actor model for achieving parallelism in a distributed envirnoment. Additional facilities such as tasks, registry and OTP have also been used. These are the tools provided by Elixir to make computing on multiple machines easy and also make the execution of the program parallel in a single multicore machine.
+
+## Author information
 
 1. Shreyas Gaadikere Sreedhara, Email - shreyasgaadikere@ufl.edu
 2. Nirali Patel, Email - niralipatel@ufl.edu
