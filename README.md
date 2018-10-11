@@ -28,7 +28,7 @@ This folder consists two distributed system projects that I designed as part of 
 
 All the projects make use of the actor model for achieving parallelism in a distributed envirnoment. Additional facilities such as tasks, registry and OTP have also been used. These are the tools provided by Elixir to make computing on multiple machines easy and also make the execution of the program parallel in a single multicore machine.
 
-## Author information:
+## Author information
 
 1. Shreyas Gaadikere Sreedhara, Email - shreyasgaadikere@ufl.edu
 2. Nirali Patel, Email - niralipatel@ufl.edu
