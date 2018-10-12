@@ -7,7 +7,7 @@ The main file [Server.ex](Server.ex) has the logic for the running of the server
 
 [Gossip_Worker.ex](Gossip_Worker.ex) will be called by the server to create the nodes in the network when the communication protocol is specified as Gossip by the user. This file has the logic to continue the gossip until the nodes converge and then send the converged message back to the Server.
 
-[PushSum_Worker.ex](PushSum_Worker.ex) will be called by the server to create the nodes in the network when the communication protocol is specified as Push-Sum by the user. This file has the logic to perform the push sum protocol, wait till the ratio of sum to weight ratio doesn't change more than (10)^-10 times three consecutive times, and then inform the Server that the node has converged.
+[PushSum_Worker.ex](PushSum_Worker.ex) will be called by the server to create the nodes in the network when the communication protocol is specified as Push-Sum by the user. This file has the logic to perform the push sum protocol, wait till the ratio of sum to weight doesn't change more than (10)^-10 times three consecutive times, and then inform the Server that the node has converged.
 
 ## Steps to run the project
 
