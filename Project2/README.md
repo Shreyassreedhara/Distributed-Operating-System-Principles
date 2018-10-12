@@ -27,8 +27,9 @@ mix escript.build
 ```
 An example for the above shown command is `./project 1000 full gossip`
 
-Different options available for topology are: full, line, imp2D, rand2D, torus and 3D
-Different options available for algorithm are: gossip, pushsum
+Different options available for topology are: full, line, imp2D, rand2D, torus and 3D. Different options available for algorithm are: gossip, pushsum
+
+You can refer this page for more information on [mix](https://elixir-lang.org/getting-started/mix-otp/introduction-to-mix.html)
 
 ## Author Information
 1. Shreyas Gaadikere Sreedhara, Email - shreyasgaadikere@ufl.edu
