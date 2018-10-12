@@ -9,6 +9,24 @@ The main file [Server.ex](Server.ex) has the logic for the running of the server
 
 [PushSum_Worker.ex](PushSum_Worker.ex) will be called by the server to create the nodes in the network when the communication protocol is specified as Push-Sum by the user. This file has the logic to perform the push sum protocol, wait till the ratio of sum to weight ratio doesn't change more than (10)^-10 times three consecutive times, and then inform the Server that the node has converged.
 
+## Steps to run the project
+
+You should have [Elixir](https://elixir-lang.org/install.html) installed on your system to run the following project on your system. Clone this repository into your system and run the following commands
+
+`mix new somefilename`
+
+Once you run this command a new mix project will be created. Go into the new directory created and inside it you will find a lib directory. Go into the lib directory and delete the files in there. Then copy and paste all the files that you have downloaded that is related to the Project2 inside it. Then open the mix.exs file and add the following line inside the def project do [] and save it
+
+`escript: [main_module: Server],`
+
+Once that is done, from the directory where mix.exs is present, run the following commands
+
+```
+mix escript.build
+./project numNodes topology algorithm
+```
+An example for the above shown command is `./project 1000 full gossip`
+
 ## Author Information
 1. Shreyas Gaadikere Sreedhara, Email - shreyasgaadikere@ufl.edu
 2. Nirali Patel, Email - niralipatel@ufl.edu
