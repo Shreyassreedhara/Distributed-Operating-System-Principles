@@ -23,7 +23,7 @@ All devices from phones to supercomputers are connected to the Internet or other
 ## Contents
 
 This folder consists two distributed system projects that I designed as part of my Distributed Operating System Principles here at the University of Florida. 
-1. [Finding perfect sqaures for solving elliptic curve theory](Project1)
+1. [Finding perfect sqaures which are also sum of consecutive squares](Project1)
 2. [Gossip and Push Sum communication protocols](Project2)
 
 All the projects make use of the actor model for achieving parallelism in a distributed envirnoment. Additional facilities such as tasks, registry and OTP have also been used. These are the tools provided by Elixir to make computing on multiple machines easy and also make the execution of the program parallel in a single multicore machine.
