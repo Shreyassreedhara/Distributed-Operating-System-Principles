@@ -8,7 +8,7 @@ This is a brief of how the chord network works. For detailed explanation [read h
 
 ## Steps to run the project
 
-I have used [Visual studio code](https://code.visualstudio.com/download) as editor while coding for this project. It has an built support for syntax and filling suggestion for Elixir. This can be got by installing an [additional package](https://marketplace.visualstudio.com/items?itemName=mjmcloug.vscode-elixir) along with Visual studio code.
+I have used [Visual studio code](https://code.visualstudio.com/download) as editor while coding for this project. It has a built in support for syntax highlighter and autofill for Elixir. This can be got by installing an [additional package](https://marketplace.visualstudio.com/items?itemName=mjmcloug.vscode-elixir) along with Visual studio code.
 
 You should have [Elixir](https://elixir-lang.org/install.html) installed on your system to run the following project on your system. Clone this repository into your system and run the following commands
 
