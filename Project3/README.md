@@ -4,7 +4,13 @@ The aim of this project was to implement a Chord Network Protocol. Chord is base
 
 Given a file, the same SHA algorithm can be applied on it and can be converted to a 160 bit identifier. Based on the this identifier and the node identifier the decision will be taken as to on which node this file has to stored. Similarly requesting a file from a node, the node will decide which node to contact, if it doesn't have the file, based on the SHA value of the file requested.
 
-This is a brief of how the chord network works. For detailed explanation [read here](https://en.wikipedia.org/wiki/Chord_(peer-to-peer)) 
+This is a brief of how the chord network works. For detailed explanation [read here](https://en.wikipedia.org/wiki/Chord_(peer-to-peer))
+
+## Contents of the project
+
+Chord_master: This file is responsible for initially setting up the chord network by creating the nodes. It also maintains the workflow by scheduling the various tasks the nodes have to perform one after the other. Finally, it outputs the total average hops for the network after collecting the data from all the nodes.
+
+Chord_node: This file is responsible for the working of the nodes. It has the logic for filling up the lookuptable, fingertable and also to start and finish sending requests to random nodes.  
 
 ## Steps to run the project
 
