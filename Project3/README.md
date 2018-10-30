@@ -4,11 +4,11 @@ The aim of this project was to implement a Chord Network Protocol. Chord is base
 
 Given a file, the same SHA algorithm can be applied on it and can be converted to a 160 bit identifier. Based on the this identifier and the node identifier the decision will be taken as to on which node this file has to stored. Similarly requesting a file from a node, the node will decide which node to contact, if it doesn't have the file, based on the SHA value of the file requested.
 
-This is a brief of how the chord network works. For detailed explanation read here 
+This is a brief of how the chord network works. For detailed explanation [read here](https://en.wikipedia.org/wiki/Chord_(peer-to-peer)) 
 
 ## Steps to run the project
 
-I have used Visual studio code as editor while coding for this project. It has an built support for syntax and filling suggestion for Elixir. This can be got by installing an additional package along with Visual studio code.
+I have used [Visual studio code](https://code.visualstudio.com/download) as editor while coding for this project. It has an built support for syntax and filling suggestion for Elixir. This can be got by installing an additional package along with Visual studio code.
 
 You should have [Elixir](https://elixir-lang.org/install.html) installed on your system to run the following project on your system. Clone this repository into your system and run the following commands
 
