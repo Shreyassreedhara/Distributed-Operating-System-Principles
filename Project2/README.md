@@ -11,9 +11,11 @@ The main file [Server.ex](Server.ex) has the logic for the running of the server
 
 ## Steps to run the project
 
+I have used [Visual studio code](https://code.visualstudio.com/download) as editor while coding for this project. It has an built support for syntax and filling suggestion for Elixir. This can be got by installing an [additional package](https://marketplace.visualstudio.com/items?itemName=mjmcloug.vscode-elixir) along with Visual studio code.
+
 You should have [Elixir](https://elixir-lang.org/install.html) installed on your system to run the following project on your system. Clone this repository into your system and run the following commands
 
-`mix new somefilename`
+`mix new project2`
 
 Once you run this command a new mix project will be created. Go into the new directory created and inside it you will find a lib directory. Go into the lib directory and delete the files in there. Then copy and paste all the files that you have downloaded that is related to the Project2 inside it. Then open the mix.exs file and add the following line inside the def project do [] and save it
 
