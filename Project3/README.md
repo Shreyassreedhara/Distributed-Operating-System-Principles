@@ -8,9 +8,9 @@ This is a brief of how the chord network works. For detailed explanation [read h
 
 ## Contents of the project
 
-Chord_master: This file is responsible for initially setting up the chord network by creating the nodes. It also maintains the workflow by scheduling the various tasks the nodes have to perform one after the other. Finally, it outputs the total average hops for the network after collecting the data from all the nodes.
+[Chord_master](chord_master.ex): This file is responsible for initially setting up the chord network by creating the nodes. It also maintains the workflow by scheduling the various tasks the nodes have to perform one after the other. Finally, it outputs the total average hops for the network after collecting the data from all the nodes.
 
-Chord_node: This file is responsible for the working of the nodes. It has the logic for filling up the lookuptable, fingertable and also to start and finish sending requests to random nodes.  
+[Chord_node](chord_node.ex): This file is responsible for the working of the nodes. It has the logic for filling up the lookuptable, fingertable and also to start and finish sending requests to random nodes.  
 
 ## Steps to run the project
 
