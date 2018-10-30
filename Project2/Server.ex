@@ -25,7 +25,7 @@ defmodule Server do
                 raise ArgumentError, message: "Invalid algorithm name"
             end
         else
-			raise ArgumentError, message: "Enter 3 arguments, Ex: ./project 100 full gossip"
+	    raise ArgumentError, message: "Enter 3 arguments, Ex: ./project 100 full gossip"
         end
     end
 
