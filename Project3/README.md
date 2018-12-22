@@ -4,15 +4,21 @@ The aim of this project was to implement a Chord Network Protocol. Chord is base
 
 Given a file, the same SHA algorithm can be applied on it and can be converted to a 160 bit identifier. Based on the this identifier and the node identifier the decision will be taken as to on which node this file has to stored. Similarly requesting a file from a node, the node will decide which node to contact, if it doesn't have the file, based on the SHA value of the file requested.
 
-This is a brief of how the chord network works. For detailed explanation read here 
+This is a brief of how the chord network works. For detailed explanation [read here](https://en.wikipedia.org/wiki/Chord_(peer-to-peer))
+
+## Contents of the project
+
+[Chord_master](chord_master.ex): This file is responsible for initially setting up the chord network by creating the nodes. It also maintains the workflow by scheduling the various tasks the nodes have to perform one after the other. Finally, it outputs the total average hops for the network after collecting the data from all the nodes.
+
+[Chord_node](chord_node.ex): This file is responsible for the working of the nodes. It has the logic for filling up the lookuptable, fingertable and also to start and finish sending requests to random nodes.  
 
 ## Steps to run the project
 
-I have used Visual studio code as editor while coding for this project. It has an built support for syntax and filling suggestion for Elixir. This can be got by installing an additional package along with Visual studio code.
+I have used [Visual studio code](https://code.visualstudio.com/download) as editor while coding for this project. It has a built in support for syntax highlighter and autofill for Elixir. This can be got by installing an [additional package](https://marketplace.visualstudio.com/items?itemName=mjmcloug.vscode-elixir) along with Visual studio code.
 
 You should have [Elixir](https://elixir-lang.org/install.html) installed on your system to run the following project on your system. Clone this repository into your system and run the following commands
 
-`mix new somefilename`
+`mix new project3`
 
 Once you run this command a new mix project will be created. Go into the new directory created and inside it you will find a lib directory. Go into the lib directory and delete the files in there. Then copy and paste all the files that you have downloaded that is related to the Project3 inside it. Then open the mix.exs file and add the following line inside the def project do [] and save it
 
