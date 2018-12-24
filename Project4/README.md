@@ -10,7 +10,7 @@ The aim of this project is to design a network in which the participants transac
 
 I have used Visual studio code as editor while coding for this project. It has an built support for syntax and filling suggestion for Elixir. This can be got by installing an additional package along with Visual studio code.
 
-You should have [Elixir](https://elixir-lang.org/install.html) installed on your system to run the following project on your system. Clone this repository into your system and run the following commands
+You should have [Elixir](https://elixir-lang.org/install.html) and [Phoenix framework](https://hexdocs.pm/phoenix/installation.html) installed on your system to run the following project on your system. Clone this repository into your system and run the following commands
 
 `mix phx.new somefilename`
 
