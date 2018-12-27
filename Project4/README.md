@@ -16,7 +16,7 @@ You should have [Elixir](https://elixir-lang.org/install.html) and [Phoenix fram
 
 This will create a phoenix project for you with the name somefilename. It will already have many files inside it. Now you will need to add some files in some folders and replace some files in order to run this project.
 
-First, copy all the files in elixir folder from the downloaded folder and paste it inside the lib folder inside your somefilename project. The files inside the elixir folder are [bitcoin_main.ex](Elixir_files/bitcoin_main.ex), [bitcoin_user.ex](https://github.com/Shreyassreedhara/Distributed-Operating-System-Principles/blob/master/Project4/Elixir%20files/bitcoin_user.ex), [bitcoin_miner.ex](https://github.com/Shreyassreedhara/Distributed-Operating-System-Principles/blob/master/Project4/Elixir%20files/bitcoin_miner.ex), [bitcoin_miningtask.ex](https://github.com/Shreyassreedhara/Distributed-Operating-System-Principles/blob/master/Project4/Elixir%20files/bitcoin_miningtask.ex), [bitcoin_block.ex](https://github.com/Shreyassreedhara/Distributed-Operating-System-Principles/blob/master/Project4/Elixir%20files/bitcoin_block.ex).
+First, copy all the files in elixir folder from the downloaded folder and paste it inside the lib folder inside your somefilename project. The files inside the elixir folder are [bitcoin_main.ex](Elixir_files/bitcoin_main.ex), [bitcoin_user.ex](Elixir_files/bitcoin_user.ex), [bitcoin_miner.ex](Elixir_files/bitcoin_miner.ex), [bitcoin_miningtask.ex](Elixir_files/bitcoin_miningtask.ex), [bitcoin_block.ex](Elixir_files/bitcoin_block.ex).
 
 ## Design of the project
 
@@ -24,13 +24,13 @@ The project can be mainly divided into the frontend and backend portion. The bac
 
 Backend files:
 
-1. bitcoin_main.ex:
-2. bitcoin_user.ex:
-3. bitcoin_miner.ex:
-4. bitcoin_miningtask.ex:
-5. bitcoin_block.ex:
+1. [bitcoin_main.ex](Elixir_files/bitcoin_main.ex):
+2. [bitcoin_user.ex](Elixir_files/bitcoin_user.ex):
+3. [bitcoin_miner.ex](Elixir_files/bitcoin_miner.ex):
+4. [bitcoin_miningtask.ex](Elixir_files/bitcoin_miningtask.ex):
+5. [bitcoin_block.ex](Elixir_files/bitcoin_block.ex):
 
-Please refer the comments in the files for a detailed explanation.
+Refer the comments in the above files for a detailed explanation of the design.
 
 You can refer this page for more information on [mix](https://elixir-lang.org/getting-started/mix-otp/introduction-to-mix.html)
 
