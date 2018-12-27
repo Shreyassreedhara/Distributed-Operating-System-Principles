@@ -28,7 +28,7 @@ Backend files:
 2. [bitcoin_user.ex](Elixir_files/bitcoin_user.ex):
 3. [bitcoin_miner.ex](Elixir_files/bitcoin_miner.ex):
 4. [bitcoin_miningtask.ex](Elixir_files/bitcoin_miningtask.ex):
-5. [bitcoin_block.ex](Elixir_files/bitcoin_block.ex):
+5. [bitcoin_block.ex](Elixir_files/bitcoin_block.ex): This file defines the structure of the block in the bitcoin blockchain network. The fields to be present in the blocks are mentioned here. The default values for the fields are hardcoded to aid in the creation of a genesis block. These fields will be overwritten while creating subsequent blocks in the blockchain. 
 
 Refer the comments in the above files for a detailed explanation of the design.
 
