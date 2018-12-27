@@ -24,15 +24,19 @@ You can refer this page for more information on [mix](https://elixir-lang.org/ge
 
 The project can be mainly divided into the frontend and backend portion. The backend is written in Elixir and the frontend is written using html and javascript libraries like chart.js in phoenix framework.
 
+The users who does the transaction and the 
+
 Backend files:
 
 1. [bitcoin_main.ex](Elixir_files/bitcoin_main.ex):
+    This is the main file. This file contains the logic to do all the work done by the network. The creation of all the users and miners is initiated by this file.
 
 2. [bitcoin_user.ex](Elixir_files/bitcoin_user.ex):
 
 3. [bitcoin_miner.ex](Elixir_files/bitcoin_miner.ex):
 
-4. [bitcoin_miningtask.ex](Elixir_files/bitcoin_miningtask.ex):
+4. [bitcoin_miningtask.ex](Elixir_files/bitcoin_miningtask.ex): 
+    This file contains the logic for the actual work of the miner. The difficulty level for mining a bitcoin is set here. Also, this file is resposible for the miner to send the newly created block to all the users and miners.
 
 5. [bitcoin_block.ex](Elixir_files/bitcoin_block.ex): 
     This file defines the structure of the block in the bitcoin blockchain network. The fields to be present in the blocks are mentioned here. The default values for the fields are hardcoded to aid in the creation of a genesis block. These fields will be overwritten while creating subsequent blocks in the blockchain. 
