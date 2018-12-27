@@ -18,6 +18,20 @@ This will create a phoenix project for you with the name somefilename. It will a
 
 First, copy all the files in elixir folder from the downloaded folder and paste it inside the lib folder inside your somefilename project. The files inside the elixir folder are [bitcoin_main.ex](https://github.com/Shreyassreedhara/Distributed-Operating-System-Principles/blob/master/Project4/Elixir%20files/bitcoin_main.ex), [bitcoin_user.ex](https://github.com/Shreyassreedhara/Distributed-Operating-System-Principles/blob/master/Project4/Elixir%20files/bitcoin_user.ex), [bitcoin_miner.ex](https://github.com/Shreyassreedhara/Distributed-Operating-System-Principles/blob/master/Project4/Elixir%20files/bitcoin_miner.ex), [bitcoin_miningtask.ex](https://github.com/Shreyassreedhara/Distributed-Operating-System-Principles/blob/master/Project4/Elixir%20files/bitcoin_miningtask.ex), [bitcoin_block.ex](https://github.com/Shreyassreedhara/Distributed-Operating-System-Principles/blob/master/Project4/Elixir%20files/bitcoin_block.ex).
 
+## Design of the project
+
+The project can be mainly divided into the frontend and backend portion. The backend is written in Elixir and the frontend is written using html and javascript libraries like chart.js in phoenix framework.
+
+Backend files:
+
+1. bitcoin_main.ex:
+2. bitcoin_user.ex:
+3. bitcoin_miner.ex:
+4. bitcoin_miningtask.ex:
+5. bitcoin_block.ex:
+
+Please refer the comments in the files for a detailed explanation.
+
 You can refer this page for more information on [mix](https://elixir-lang.org/getting-started/mix-otp/introduction-to-mix.html)
 
 ## Author Information
