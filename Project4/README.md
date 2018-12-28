@@ -8,7 +8,7 @@ The aim of this project is to design and simulate a network in which the partici
 
 ## Steps to run the project
 
-I have used Visual studio code as editor while coding for this project. It has an built in support for syntax and filling suggestion for Elixir. This can be got by installing an additional package along with Visual studio code.
+I have used Visual studio code as editor while coding for this project. It has an built in support for syntax and filling suggestion for Elixir. This can be got by installing an [additional package](https://marketplace.visualstudio.com/items?itemName=mjmcloug.vscode-elixir) along with Visual studio code.
 
 You should have [Elixir](https://elixir-lang.org/install.html) and [Phoenix framework](https://hexdocs.pm/phoenix/installation.html) installed on your system to run the following project on your system. Clone this repository into your system and run the following commands
 
