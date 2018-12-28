@@ -16,9 +16,9 @@ You should have [Elixir](https://elixir-lang.org/install.html) and [Phoenix fram
 
 This will create a phoenix project for you with the name somefilename. It will already have many files inside it. You can refer this page for more information on [mix](https://elixir-lang.org/getting-started/mix-otp/introduction-to-mix.html).
 
-Now you will need to add/replace some files inside this project.
-
 First, copy all the files in elixir folder from the downloaded folder and paste it inside the lib folder inside your somefilename project. The files inside the elixir folder are [bitcoin_main.ex](Elixir_files/bitcoin_main.ex), [bitcoin_user.ex](Elixir_files/bitcoin_user.ex), [bitcoin_miner.ex](Elixir_files/bitcoin_miner.ex), [bitcoin_miningtask.ex](Elixir_files/bitcoin_miningtask.ex), [bitcoin_block.ex](Elixir_files/bitcoin_block.ex).
+
+Now you will need to add/replace some files inside this project.
 
 ## Design of the project
 
