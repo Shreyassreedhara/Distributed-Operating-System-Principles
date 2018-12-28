@@ -1,0 +1,7 @@
+<div id="messages"></div>
+<div id="balances"></div>
+
+<canvas id="myChart1" width="2500" height="1200"></canvas>
+<!--
+<input id="chat-input" type="text"></input>
+<canvas id="myChart" width="3200" height="1200"></canvas>>
