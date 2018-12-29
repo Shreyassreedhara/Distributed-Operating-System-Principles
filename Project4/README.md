@@ -63,6 +63,13 @@ Backend files:
 
 Refer the comments in the above files for a detailed explanation of the design.
 
+## Result
+
+This is how the page will look once the code runs successfully.
+
+![alt text](result.png)
+
 ## Author Information
 1. Shreyas Gaadikere Sreedhara, Email - shreyasgaadikere@ufl.edu
 2. Nirali Patel, Email - niralipatel@ufl.edu
+
