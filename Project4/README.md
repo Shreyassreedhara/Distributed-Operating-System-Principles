@@ -14,11 +14,27 @@ You should have [Elixir](https://elixir-lang.org/install.html) and [Phoenix fram
 
 `mix phx.new somefilename`
 
+WARNING: In my project, the project name is test. It is advised that you use the same name while creating the phoenix project. If you use any other name, you will have to change the name in all the files that you will be replacing.
+
 This will create a phoenix project for you with the name somefilename. It will already have many files inside it. You can refer this page for more information on [mix](https://elixir-lang.org/getting-started/mix-otp/introduction-to-mix.html).
 
-First, copy all the files in elixir folder from the downloaded folder and paste it inside the lib folder inside your somefilename project. The files inside the elixir folder are [bitcoin_main.ex](Elixir_files/bitcoin_main.ex), [bitcoin_user.ex](Elixir_files/bitcoin_user.ex), [bitcoin_miner.ex](Elixir_files/bitcoin_miner.ex), [bitcoin_miningtask.ex](Elixir_files/bitcoin_miningtask.ex), [bitcoin_block.ex](Elixir_files/bitcoin_block.ex).
+Copy all the files in elixir folder from the downloaded folder and paste it inside the lib folder inside your somefilename project. The files inside the elixir folder are [bitcoin_main.ex](Elixir_files/bitcoin_main.ex), [bitcoin_user.ex](Elixir_files/bitcoin_user.ex), [bitcoin_miner.ex](Elixir_files/bitcoin_miner.ex), [bitcoin_miningtask.ex](Elixir_files/bitcoin_miningtask.ex), [bitcoin_block.ex](Elixir_files/bitcoin_block.ex).
 
-Now you will need to add/replace some files inside this project.
+Now you will need to replace some files inside this project. This is to design the frontend.
+
+1. Replace the app.html inside lib/somefilename_web/layout with the [app.html](Phoenix_files/app.html) in the phoenix_files. 
+2. Replace the index.html inside lib/somefilename_web/page with [index.html](Phoenix_files/index.html) in the phoenix_files.
+3. Replace the page_controller.ex file in lib/somefilename_web/controllers with page_controller.ex in phoenix_files.
+4. Replace the socket.js file in assets/js with the socket.js in phoenix_files.
+5. Replace the room_channel.ex in lib/somefilename_web/channels with the room_channel.ex in phoenix_files.
+6. Replace the user_socket.ex in lib/somefilename_web/channels with the user_socket.ex in phoenix_files.
+7. Replace the endpoint.ex in lib/somefilename_web with endpoint.ex in phoenix_files.
+
+    See this [video](https://www.youtube.com/watch?v=e5jlIejl9Fs) or refer its [code and explanation](https://gist.github.com/yaycode/58ff8213ea54d7272ae89d0b9165be16) to get a fair idea on what exactly these file does.
+
+Once this is done, run the following command to start a local server at the address https://localhost:4000
+
+`mix phx.server`
 
 ## Design of the project
 
