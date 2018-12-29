@@ -22,13 +22,13 @@ Copy all the files in elixir folder from the downloaded folder and paste it insi
 
 Now you will need to replace the following files inside this project. This is to design the frontend.
 
-> app.html.eex inside lib/somefilename_web/layout with the [app.html.eex](Phoenix_files/app.html.eex) in the Phoenix_files. 
-> index.html inside lib/somefilename_web/page with [index.html.eex](Phoenix_files/index.html.eex) in the Phoenix_files.
-> page_controller.ex file in lib/somefilename_web/controllers with [page_controller.ex](Phoenix_files/page_controller.ex) in Phoenix_files.
-> socket.js file in assets/js with the [socket.js](Phoenix_files/socket.js) in Phoenix_files.
-> room_channel.ex in lib/somefilename_web/channels with the [room_channel.ex](Phoenix_files/room_channel.ex) in Phoenix_files.
-> user_socket.ex in lib/somefilename_web/channels with the [user_socket.ex](Phoenix_files/user_socket.js) in Phoenix_files.
-> endpoint.ex in lib/somefilename_web with [endpoint.ex](Phoenix_files/endpoint.ex) in Phoenix_files.
+- app.html.eex inside lib/somefilename_web/layout with the [app.html.eex](Phoenix_files/app.html.eex) in the Phoenix_files. 
+- index.html inside lib/somefilename_web/page with [index.html.eex](Phoenix_files/index.html.eex) in the Phoenix_files.
+- page_controller.ex file in lib/somefilename_web/controllers with [page_controller.ex](Phoenix_files/page_controller.ex) in Phoenix_files.
+- socket.js file in assets/js with the [socket.js](Phoenix_files/socket.js) in Phoenix_files.
+- room_channel.ex in lib/somefilename_web/channels with the [room_channel.ex](Phoenix_files/room_channel.ex) in Phoenix_files.
+- user_socket.ex in lib/somefilename_web/channels with the [user_socket.ex](Phoenix_files/user_socket.js) in Phoenix_files.
+- endpoint.ex in lib/somefilename_web with [endpoint.ex](Phoenix_files/endpoint.ex) in Phoenix_files.
 
     See this [video](https://www.youtube.com/watch?v=e5jlIejl9Fs) or refer its [code and explanation](https://gist.github.com/yaycode/58ff8213ea54d7272ae89d0b9165be16) to get a fair idea on what exactly these file does.
 
