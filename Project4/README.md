@@ -36,6 +36,8 @@ Once this is done, run the following command to start a local server at the addr
 
 `mix phx.server`
 
+_After running this command you will be able to see that the code has run in the backend as well as in the frontend. In the backend you will see the result in the form of print statements and in the frontend you will see a graph being plotted at the IP mentioned above._
+
 ## Design of the project
 
 The project can be mainly divided into the frontend and backend portion. The backend is written in Elixir and the frontend is written using html and javascript libraries like chart.js in phoenix framework.
