@@ -20,15 +20,15 @@ This will create a phoenix project for you with the name somefilename. It will a
 
 Copy all the files in elixir folder from the downloaded folder and paste it inside the lib folder inside your somefilename project. The files inside the elixir folder are [bitcoin_main.ex](Elixir_files/bitcoin_main.ex), [bitcoin_user.ex](Elixir_files/bitcoin_user.ex), [bitcoin_miner.ex](Elixir_files/bitcoin_miner.ex), [bitcoin_miningtask.ex](Elixir_files/bitcoin_miningtask.ex), [bitcoin_block.ex](Elixir_files/bitcoin_block.ex).
 
-Now you will need to replace some files inside this project. This is to design the frontend.
+Now you will need to replace the following files inside this project. This is to design the frontend.
 
-1. Replace the app.html inside lib/somefilename_web/layout with the [app.html](Phoenix_files/app.html) in the phoenix_files. 
-2. Replace the index.html inside lib/somefilename_web/page with [index.html](Phoenix_files/index.html) in the phoenix_files.
-3. Replace the page_controller.ex file in lib/somefilename_web/controllers with page_controller.ex in phoenix_files.
-4. Replace the socket.js file in assets/js with the socket.js in phoenix_files.
-5. Replace the room_channel.ex in lib/somefilename_web/channels with the room_channel.ex in phoenix_files.
-6. Replace the user_socket.ex in lib/somefilename_web/channels with the user_socket.ex in phoenix_files.
-7. Replace the endpoint.ex in lib/somefilename_web with endpoint.ex in phoenix_files.
+1. app.html.eex inside lib/somefilename_web/layout with the [app.html.eex](Phoenix_files/app.html.eex) in the Phoenix_files. 
+2. index.html inside lib/somefilename_web/page with [index.html.eex](Phoenix_files/index.html.eex) in the Phoenix_files.
+3. page_controller.ex file in lib/somefilename_web/controllers with [page_controller.ex](Phoenix_files/page_controller.ex) in Phoenix_files.
+4. socket.js file in assets/js with the [socket.js](Phoenix_files/socket.js) in Phoenix_files.
+5. room_channel.ex in lib/somefilename_web/channels with the [room_channel.ex](Phoenix_files/room_channel.ex) in Phoenix_files.
+6. user_socket.ex in lib/somefilename_web/channels with the [user_socket.ex](Phoenix_files/user_socket.js) in Phoenix_files.
+7. endpoint.ex in lib/somefilename_web with [endpoint.ex](Phoenix_files/endpoint.ex) in Phoenix_files.
 
     See this [video](https://www.youtube.com/watch?v=e5jlIejl9Fs) or refer its [code and explanation](https://gist.github.com/yaycode/58ff8213ea54d7272ae89d0b9165be16) to get a fair idea on what exactly these file does.
 
