@@ -22,7 +22,7 @@ All devices from phones to supercomputers are connected to the Internet or other
 
 ## Contents
 
-This folder consists two distributed system projects that I designed as part of my Distributed Operating System Principles here at the University of Florida. 
+This folder consists of four distributed system projects that I designed as part of my Distributed Operating System Principles here at the University of Florida. 
 1. [Finding perfect sqaures which are also sum of consecutive squares](Project1)
 2. [Gossip and Push Sum communication protocols](Project2)
 3. [Chord Network protocol](Project3)
