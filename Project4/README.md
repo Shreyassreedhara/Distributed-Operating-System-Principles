@@ -5,6 +5,7 @@ The aim of this project is to design and simulate a network in which the partici
 1. [What is a bitcoin?](https://www.youtube.com/watch?v=Um63OQz3bjo)
 2. [Which is the driving technology of a bitcoin?](https://www.youtube.com/watch?v=SSo_EIwHSd4)
 3. [How do I transact using a bitcoin?](https://www.youtube.com/watch?v=Em8nJN8IEes)
+4. [How is digital signature used in bitcoin?](https://www.youtube.com/watch?v=Aq3a-_O2NcI&t=346s)
 
 ## Steps to run the project
 
