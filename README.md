@@ -37,5 +37,5 @@ All the projects make use of the actor model for achieving parallelism in a dist
 
 ## License
 
-https://img.shields.io/github/license/Shreyassreedhara/Distributed-Operating-System-Principles?logo=GitHub
+![GitHub](https://img.shields.io/github/license/Shreyassreedhara/Distributed-Operating-System-Principles?logo=GitHub)
 Licensed under the [MIT license](LICENSE.md)
